@@ -1,0 +1,32 @@
+.relojes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+@media (min-width: 768px) {
+  .relojes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .relojes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.reloj {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.reloj .contenido {
+  padding: 1rem;
+}
+
+.reloj .descripcion {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
