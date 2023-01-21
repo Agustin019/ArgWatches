@@ -34,7 +34,7 @@ main {
   font-size: 4rem;
   text-align: center;
   font-weight: 900;
-  color: var(--primary);
+  /*color: var(--primary);*/
   margin: 5rem 0;
 }
 
@@ -50,9 +50,6 @@ main {
   background-size: cover;
   background-position: center center;
 }
-/* .header .logo {
-    width: 25rem;
-} */
 
 .header .logo {
   font-size: 3rem;
@@ -101,6 +98,7 @@ main {
   padding: 7px 10px;
   position: relative;
 }
+
 .header .navegacion a::after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
@@ -115,11 +113,9 @@ main {
 }
 
 .header .navegacion a:hover::after {
-    width: 100%; 
-    left: 0; 
+  width: 100%;
+  left: 0;
 }
-
-
 
 /** Footer **/
 .footer {
@@ -158,4 +154,18 @@ main {
 
 .footer .copyright {
   text-align: center;
+}
+
+.error,
+.error-enlace{
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.error-enlace{
+  display: block;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.8rem;
 }
