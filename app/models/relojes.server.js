@@ -4,3 +4,8 @@ export async function getRelojes(){
 
     return resultado
 }
+
+export async function getReloj(url){
+    const respuesta = await fetch(`${process.env.API_URL}/relojes?filters[url]=${url}&populate=imagen`)
+    return await respuesta.json()
+}

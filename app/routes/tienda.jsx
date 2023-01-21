@@ -16,7 +16,7 @@ export function links(){
 export function meta() {
   return {
     title: 'ArgWatches - Tienda',
-    description: 'Venta de los relojes mas demandados en el mercado actualmente y mas'
+    description: 'ArgWatches - Nuestra coleccion de los relojes mas demandados en el mercado'
   }
 }
 

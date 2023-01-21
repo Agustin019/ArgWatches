@@ -42,9 +42,25 @@ main {
     background-size: cover;
     background-position: center center;
 }
-.header .logo {
+/* .header .logo {
     width: 25rem;
+} */
+
+.header .logo{
+    font-size: 3rem;
+    color: var(--white);
 }
+
+.logo-cont{
+    display: flex;
+    align-items: center;
+}
+
+.logo-txt{
+    font-size: 3rem;
+    color: var(--white);
+}
+
 .barra {
     display: flex;
     flex-direction: column;

@@ -1,3 +1,10 @@
+:root {
+  --primary: #e99401;
+  --black: #262626;
+  --white: #FFF;
+  --fuente-principal: 'Outfit', sans-serif;
+}
+
 .relojes-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -20,13 +27,49 @@
   grid-template-columns: 2fr 3fr;
   gap: 1rem;
   align-items: center;
+  max-width: 70rem;
+  margin: 0 auto;
 }
 
 .reloj .contenido {
   padding: 1rem;
 }
 
+.reloj .contenido h3{
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.reloj .precio{
+  color: var(--primary);
+  font-size: 4rem;
+  font-weight: 700;
+}
+
 .reloj .descripcion {
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  font-size: 1.8rem;
+}
+
+.reloj .enlace{
+  margin-top: 2rem;
+  display: block;
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  padding: .5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.4rem;
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+
+.reloj .enlace:hover{
+  background-color: var(--primary);
 }
