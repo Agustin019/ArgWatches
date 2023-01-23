@@ -4,6 +4,7 @@ import Styles from '~/styles/nosotros.css'
 export function links() {
   return [
     {
+      as:'style',
       rel: 'stylesheet',
       href: Styles
     },

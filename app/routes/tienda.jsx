@@ -1,14 +1,14 @@
 import { useLoaderData } from "@remix-run/react"
 import { getRelojes } from '~/models/relojes.server'
 
-import styles from '~/styles/relojes.css'
+import stylesRelojes from '~/styles/relojes.css'
 import Reloj from "~/components/reloj"
 
 export function links(){
   return[
     {
       rel:'stylesheet',
-      href: styles
+      href: stylesRelojes
     }
   ]
 }

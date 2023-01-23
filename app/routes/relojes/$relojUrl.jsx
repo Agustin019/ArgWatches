@@ -16,6 +16,16 @@ export async function loader({ params }) {
     return reloj
 }
 
+export function links() {
+    return [
+        {
+            rel: 'stylesheet',
+            href: Styles,
+            as:'styles'
+        }
+    ]
+}
+
 export function meta({ data }) {
 
     if(!data){
@@ -30,14 +40,7 @@ export function meta({ data }) {
     }
 }
 
-export function links() {
-    return [
-        {
-            rel: 'stylesheet',
-            href: Styles
-        }
-    ]
-}
+
 
 
 

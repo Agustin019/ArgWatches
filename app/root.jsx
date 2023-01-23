@@ -39,7 +39,8 @@ export function links() {
             href: 'https://fonts.googleapis.com',
             crossOrigin: 'true'
         },
-        {
+        {   
+            as:'style',
             rel: 'stylesheet',
             href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet'
         },
@@ -96,7 +97,7 @@ export function ErrorBoundary({error}){
     return(
         <Document>
             <p className="error">{error.status} {error.statusText}</p>
-            <Link className='error-enlace' to='/'> Volver a la pagina principal</Link> className='error-enlace'
+            <Link className='error-enlace' to='/'> Volver a la pagina principal</Link>
         </Document>
     )
 }

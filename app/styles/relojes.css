@@ -55,21 +55,3 @@
   font-size: 1.8rem;
 }
 
-.reloj .enlace{
-  margin-top: 2rem;
-  display: block;
-  background-color: var(--black);
-  color: var(--white);
-  text-decoration: none;
-  padding: .5rem;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 1.4rem;
-  transition-property: background-color;
-  transition-duration: 300ms;
-}
-
-.reloj .enlace:hover{
-  background-color: var(--primary);
-}
