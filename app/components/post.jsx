@@ -1,23 +1,19 @@
-import { Link } from "@remix-run/react"
-
+import { Link } from '@remix-run/react'
 import { formatearFecha } from '~/utils/helpers'
 
-function Post({ post }) {
+export default function Post({post}) {
 
-  const { titulo, imagen, contenido, URL, publishedAt } = post
+    const {contenido, imagen, titulo, URL, publishedAt } = post
 
-  return (
-    <article className="post">
-      <img src={imagen.data.attributes.formats.small.url} alt={`Imagen de ${titulo}`} />
-      <div className="contenido">
-        <h2>{titulo}</h2>
-        <p className="fecha">Fecha: {formatearFecha(publishedAt)}</p>
-        <p className="resumen">{contenido}</p>
-      </div>
-      <Link className="enlace" to={`/posts/${URL}`} >Leér Entrada</Link>
-      
-    </article>
-  )
+    return (
+        <article className="post">
+            <img className="imagen" src={imagen.data.attributes.formats.small.url} alt={`imagen blog ${titulo}`} />
+            <div className="contenido">
+                <h3>{titulo}</h3>
+                <p className='fecha'>{formatearFecha(publishedAt)}</p>
+                <p className="resumen">{contenido}</p>
+                <Link className='enlace' to={`/blog/${URL}`}>Leer Post</Link>
+            </div>
+        </article>
+    )
 }
-
-export default Post

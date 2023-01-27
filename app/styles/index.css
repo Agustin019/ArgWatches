@@ -80,8 +80,15 @@ main {
 
 .header .navegacion {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   margin-top: 5rem;
+  align-items: center;
+}
+@media (min-width:640px){
+  .header .navegacion{
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 768px) {
@@ -95,9 +102,25 @@ main {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  padding: 7px 10px;
+  padding: 2px 8px;
   position: relative;
+  font-size: 3rem;
 }
+.header .navegacion img{
+  width: 5rem;
+}
+
+@media (min-width:640px){
+  .header .navegacion a{
+    flex-direction: row;
+    font-size: 2rem;
+  }
+  .header .navegacion img{
+    width: 3rem;
+  }
+}
+
+
 
 .header .navegacion a::after {
   background: none repeat scroll 0 0 transparent;
@@ -169,6 +192,9 @@ main {
   text-decoration: none;
   font-weight: 700;
 }
+.footer .navegacion a:last-of-type{
+  display: none;
+}
 
 .footer .copyright {
   text-align: center;
@@ -206,3 +232,39 @@ main {
 .enlace:hover{
   background-color: var(--primary);
 }
+
+
+/*Separador index*/
+
+.curso{
+  padding: 10rem 0;
+  margin-top: 10rem;
+  background-image:linear-gradient(to left, rgb(0 0 0 /.65), rgb(0 0 0 / .7) ) ,url('https://i.ibb.co/2jtj512/fondo-2.jpg');
+  background-size: cover;
+  background-position: center center;
+
+}
+
+@media (min-width: 768px){
+  .curso .curso-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+}
+
+.curso .texto{
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--white);
+}
+.heading-primary{
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 900;
+  color: var(--primary);
+  margin: 5rem 0;
+}
+
+

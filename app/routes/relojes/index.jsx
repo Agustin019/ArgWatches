@@ -2,12 +2,12 @@ import { useLoaderData } from "@remix-run/react"
 import { getRelojes } from '~/models/relojes.server'
 
 import stylesRelojes from '~/styles/relojes.css'
-import Reloj from "~/components/reloj"
+import  ListadoRelojes from '~/components/listado-relojes'
 
-export function links(){
-  return[
+export function links() {
+  return [
     {
-      rel:'stylesheet',
+      rel: 'stylesheet',
       href: stylesRelojes
     }
   ]
@@ -20,7 +20,7 @@ export function meta() {
   }
 }
 
-export async function loader(){
+export async function loader() {
   const relojes = await getRelojes()
   return relojes.data
 }
@@ -30,18 +30,8 @@ function Tienda() {
 
   return (
     <main className="contenedor">
-      <h2 className="heading">Nuestra Coleccion</h2>
-        
-        {relojes?.length &&(
-          <div className="relojes-grid">
-              {relojes.map(reloj=>(
-                  <Reloj
-                    key={reloj?.id}
-                    reloj={reloj?.attributes}
-                  />
-              ))}
-          </div>
-        )}
+      <ListadoRelojes relojes={relojes} />
+    
     </main>
   )
 }
